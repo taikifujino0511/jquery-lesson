@@ -61,6 +61,15 @@
       // ・連続で何回もホバーした時、手を止めているのにリストがスライドし続けないか
       // ・出てきたリストの上にホバーできるか
       // ※必ずレビュー前に上記挙動が問題ないか確認すること
+      function showDropdown() {
+        $(this).find('ul').stop()
+        $(this).find('ul').slideDown()
+      }
+      function hideDropdown() {
+        $(this).find('ul').stop()
+        $(this).find('ul').slideUp()
+      }
+      $('.menu__list__title').closest('li').hover(showDropdown, hideDropdown)
     </script>
   </body>
 </html>
