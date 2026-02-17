@@ -76,7 +76,7 @@ $('#q5').off('click').on('click', function() {
 });
 
 // 第6問  id='q6'の子要素をクリックしたら、その要素のインデックス（何番目か）をconsole.log()とalert()を用いて表示させよ。
-$('#q6').find('li').off('click').on('click', function() {
+$('#q6 li').off('click').on('click', function() {
   const targetNum = $(this).index();
   console.log(targetNum);
   alert(targetNum);

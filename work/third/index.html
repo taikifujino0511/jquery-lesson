@@ -31,10 +31,10 @@
       // .addClass() クラスを追加します。
       // .removeClass() クラスを削除します。
 
-      const tabs = $('.nav').find('li');
+      const tabs = $('.nav li');
       tabs.off('click').on('click', function() {
         const targetTabIndex = tabs.index(this);
-        $('.contents').find('li')
+        $('.contents li')
         .addClass('is-hidden')
         .eq(targetTabIndex)
         .removeClass('is-hidden')
