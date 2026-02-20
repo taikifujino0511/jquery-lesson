@@ -107,11 +107,11 @@
         });
 
         function filterList(selectedValue){
-          $('.list li').each(function (){
+          const targets = $('.list li')
+          targets.show();
+          targets.each(function (){
             const elementValue = $(this).data('category-type');
-            if (selectedValue === 'all') {
-              $(this).show();
-            } else {
+            if (selectedValue !== 'all') {
               $(this).toggle(elementValue === selectedValue);
             }
           });
