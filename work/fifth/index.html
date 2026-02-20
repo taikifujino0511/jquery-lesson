@@ -108,7 +108,10 @@
 
         function filterList(selectedValue){
           const targets = $('.list li')
-          targets.show();
+          if (selectedValue === 'all') {
+            targets.show();
+            return
+          }
           targets.each(function (){
             const elementValue = $(this).data('category-type');
             if (selectedValue !== 'all') {
