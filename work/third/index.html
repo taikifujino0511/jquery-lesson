@@ -30,7 +30,17 @@
       // .eq() 引数に応じたindexの要素を指定します。
       // .addClass() クラスを追加します。
       // .removeClass() クラスを削除します。
+
+      $(function() {
+        const tabs = $('.nav li');
+        tabs.off('click').on('click', function() {
+          const targetTabIndex = tabs.index(this);
+          $('.contents li')
+          .addClass('is-hidden')
+          .eq(targetTabIndex)
+          .removeClass('is-hidden');
+        });
+      });
     </script>
   </body>
 </html>
-
